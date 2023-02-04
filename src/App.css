@@ -22,13 +22,26 @@
 
 }
 .nav-btn{
-  border: none;
+  border: 2px solid black;
   color: black;
   background: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
   height: 40px;
   font-size: 1rem;
   border-radius: 20px;
   width: 150px;
+  margin-left: 3px;
+}
+
+.nav-btn1{
+  border: 2px solid black;
+  color: black;
+  background: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 20px;
+  width: 150px;
+  margin-left: 1px;
+  
 }
         
          
@@ -91,14 +104,15 @@
   width: 25%;
   background: linear-gradient(90deg, rgba(212,242,255,1) 0%, rgba(194,222,255,1) 50%, rgba(173,199,255,1) 100%);
   height: 90vh;
-  overflow-y: scroll;
+  overflow-y: scroll  ;
 
 }
 .file-head{
   color: #FF5757;
   font-size: 2rem;
   font-weight: 400;
-  margin: 0 10px;
+  margin: 0 25px;
+  display: flex;
 }
 .change-tab{
   background: #CDE990;
@@ -121,7 +135,8 @@
   font-size: 1rem;
   border-radius: 20px;
   width: 150px;
-  border: none;
+  border: 2px solid black;
+  margin-bottom: 1rem;
   
 }
 .left-container{
@@ -153,6 +168,9 @@
 .all-files{
   display: flex;
   flex-wrap: wrap;
+  border: 4px solid black;
+  margin: 10px;
+  height: 100%;
 }
 .prev-files{
   display: flex;
@@ -161,15 +179,16 @@
 .input-area{
   width: 100%;
   height: 30px;
-  margin: 5px 0;
+  /* margin: 5px 0; */
   border-radius:3px ;
-  border: 1px solid #f0536c;
+  border: 5px solid black;
   background: transparent;
   color: black;
 }
 .meet{
-  border: 2px solid #9340FF;
-  color: #0F1819;
+  border: 4px solid black;
+  color: black;
+  margin: 5px;
 
 
 }
@@ -195,10 +214,9 @@
 }
 .me-video{
   
-  width: 95%;
-
+  width: 100%;
   height: 100%;
-  border: 2px solid #9340FF ;
+  border: 4px solid black;
   margin: 1.5rem;
 
 }
@@ -206,16 +224,38 @@
 .vid-btn{
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: space-evenly;
+   
 }
 .btn-sm-mod{
-  width: 34px;
+  width: 38px;
   height: 34px;
   margin: 10px;
   background:transparent;
   border: none;
+  /* background-color: white; */
   
   }
+.btn-sm-mod1:focus{
+  background-color: black;
+  cursor: pointer;
+}
+.btn-sm-mod2:focus{
+  background-color: black;
+  cursor: pointer;
+}
+.btn-sm-mod3:focus{
+  background-color: black;
+  cursor: pointer;
+}
+.btn-sm-mod4:focus    {
+  background-color: black;
+  cursor: pointer;
+}
+.btn-sm-mod5:focus{
+  background-color: black;
+  cursor: pointer;
+}
   .svg-image{
     margin: 20px;
     width: 100%;
@@ -231,11 +271,24 @@
 
     .upload-area{
       width: 80%;
-      margin: 1rem;
+      margin: 1rem 1rem 20px;
+      
+    }
+
+    .upload-area1{
+      width: 100%;
+      height: 30px;
+      border-radius: 3px;
+      border: 5px solid black;
+      background: transparent;
+      color: black;
+      width: 91%;
+      margin: 1rem 0rem 8px;
+      
     }
     .upload-in{
       width: 90%;
-      border: 2px solid #9340FF;
+      border: 4px solid black;
 
     }
     .avatar{
@@ -251,7 +304,7 @@
       align-items: center;
     }
     .file-upload{
-      margin: 2rem 0;
+      margin: 1rem 0;
     }
     .file-card{
       display: flex;
@@ -277,7 +330,9 @@
 
     }
     .select-option{
-      width: 70px;
+      width: 90px;
+      border: 4px solid black;
+      margin-top: 5px;
     }
     .previous-version{
       display: flex;
@@ -315,7 +370,14 @@
       height: 30px;
       background-color: black;
       background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
-      border: 1px solid white;
+      border: 2px solid black;
       border-radius:8px;
       margin: 30px;
     }
+    hr{
+        border: dotted black 6px;
+        border-bottom: none;
+        width: 92%;
+        margin: 20px auto;
+    }
+    

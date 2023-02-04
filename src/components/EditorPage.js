@@ -103,8 +103,8 @@ export default function EditorPage(props){
     return(
         <div className="editor">
     <Editor
-     height="50vh"
-     width="50vw"
+     height="66vh"
+     width="70vw"
 
      defaultLanguage= {lang}
      defaultValue="// start your code here"
@@ -115,13 +115,13 @@ export default function EditorPage(props){
      
    />
    <select className = "select-option" value={lang} onChange = {handleLang} id="lang">
-                            <option value="javascript" >JavaScript</option>
-                            <option value="typescript">TypeScript</option>
-                            <option value="html" >HTML</option>
-                            <option value="css" >CSS</option>
+                            <option value="Javascript" >JavaScript</option>
+                            <option value="Typescript">TypeScript</option>
+                            <option value="Html" >HTML</option>
+                            <option value="Css" >CSS</option>
   </select>
-   <input onChange={handleName} type="text" placeholder='Enter File Name' className='input-area upload-area'></input>
-   <button className="nav-btn" onClick={saveFile}>{props.loading?"loading...":"save file"}</button>
+   <input onChange={handleName} type="text" placeholder='Enter File Name' className='upload-area1'></input>
+   <button className="nav-btn1" onClick={saveFile}>{props.loading?"Please Wait...":"Save File"}</button>
         </div>
     );
 }

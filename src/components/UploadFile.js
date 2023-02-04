@@ -68,25 +68,14 @@ export default function UploadFile(props){
       
     return(
         <div className="upload-file">
-                  {/* <div className="input-file"> */}
       
       <input onChange={handleName} type="text" placeholder='Enter File Name' className='input-area upload-in'></input>
       <input className='file-upload'
         type="file"
         onChange={onChange}
       />
-      <button className='nav-btn ' onClick={upload}>{props.loading?"loading...":"Upload File"}</button>
+      <button className='nav-btn ' onClick={upload}>{props.loading?"Please Wait...":"Upload File"}</button>
       <button className='back-btn' onClick={props.goback}>{" Back "}</button>
-      {/* {
-        hash && (
-        //   <img src={fileUrl} width="600px" />
-        <p>{`file successfully uploaded with hash :${hash}`}</p>
-        
-        )
-      } */}
-      
-      
-    {/* </div> */}
 
         </div>
     );

@@ -74,6 +74,7 @@ call();
 
             {renderPreviousFiles}
             </div>
+            <hr></hr>
             <div>
                 <p className = "file-head">
                     All Files
