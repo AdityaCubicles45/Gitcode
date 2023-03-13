@@ -63,6 +63,7 @@ export default function Meeting(props) {
             onChange={handleRoom}
             placeholder="Connect Meet"
           ></input>
+          <br></br>
           <button className="nav-btn" onClick={handleJoin}>
             {" "}
             Join Meet
@@ -81,7 +82,7 @@ export default function Meeting(props) {
               stroke-width="0"
               viewBox="0 0 16 12"
               height="10rem"
-              width="10rem"
+              width="11rem"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -208,7 +209,7 @@ export default function Meeting(props) {
           </div>
         )}
       </div>
-      <button className="back-btn" onClick={props.goback}>
+      <button className="back-btn2" onClick={props.goback}>
         {" Back "}
       </button>
     </div>

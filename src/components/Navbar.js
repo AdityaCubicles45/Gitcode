@@ -9,7 +9,7 @@ export default function Navbar(props){
 
             <div className="avatar">
 
-            <img alt="avatar1" width="45" height="45" src="./images/avatar.png"></img>
+            <img alt="avatar1" width="50" height="50" src="./images/avatar.png"></img>
 
             <button className="btn-grad" onClick={props.walletConnected?props.disconnect:props.connectWallet}>
             {props.walletConnected?add:"Connect Wallet"}
