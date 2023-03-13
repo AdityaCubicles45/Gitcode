@@ -56,12 +56,12 @@ export default function Meeting(props) {
           <input
             className="input-area meet"
             onChange={handleRoom}
-            placeholder="Create Meet"
+            placeholder="Create Meeting"
           ></input>
           <input
             className="input-area meet"
             onChange={handleRoom}
-            placeholder="Connect Meet"
+            placeholder="Connect Meeting"
           ></input>
           <br></br>
           <button className="nav-btn" onClick={handleJoin}>

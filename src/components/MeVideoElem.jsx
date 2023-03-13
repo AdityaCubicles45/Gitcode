@@ -5,6 +5,7 @@ const MeVideoElem = () => {
   const stream = useHuddleStore((state) => state.stream);
   const isCamPaused = useHuddleStore((state) => state.isCamPaused);
 
+
   const videoRef = useRef(null);
 
   useEffect(() => {

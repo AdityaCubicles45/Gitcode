@@ -9,6 +9,7 @@ import {
   HuddleClientProvider,
 } from "@huddle01/huddle01-client";
 import { useHuddleStore } from "@huddle01/huddle01-client/store";
+// import { usePeerShareTrack } from "huddle01-client/hooks";
 import { contractAddress, abi } from "./constants";
 
 import Home from "./components/Home";
@@ -23,6 +24,7 @@ import ChangeTab from "./components/ChangeTab";
 function App() {
   const huddleClient = getHuddleClient(
     "eb9203015d72aed1764b69cccd1f77a2189e8274a5f993030d60bda68f8b5c3a"
+    
   );
   const [walletConnected, setWalletConnected] = useState(false);
   const [loading, setLoading] = useState(false);
