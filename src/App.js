@@ -22,7 +22,7 @@ import ChangeTab from "./components/ChangeTab";
 
 function App() {
   const huddleClient = getHuddleClient(
-    "702b03a76c58010686023dac1caeb63696b04b1c069ef14405b4ede34ed1586b"
+    "eb9203015d72aed1764b69cccd1f77a2189e8274a5f993030d60bda68f8b5c3a"
   );
   const [walletConnected, setWalletConnected] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -35,7 +35,7 @@ function App() {
   // const contract  = Contract()
 
   const web3ModalRef = useRef();
-  function addfile() {
+    function addfile() {
     setInUploadTab(true);
     setInBtnTab(false);
     setInMeetTab(false);
@@ -44,6 +44,7 @@ function App() {
     setInMeetTab(true);
     setInBtnTab(false);
     setInUploadTab(false);
+    setInEditorTab(true);
   }
   function editor() {
     setInMeetTab(false);
