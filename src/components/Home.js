@@ -6,7 +6,7 @@ export default function Home(){
                 <span className="gitcode">Welcome to GitCode</span><br/>
                 Build Share & <span className="collab">Collaborate</span>
             </p>
-            <img className="home-img" alt="brand-logo" src="./images/main.png">
+            <img className="home-img" alt="brand-logo" src="./images/main.svg">
             </img>
 
             

@@ -1,7 +1,7 @@
 .App{
   align-items: center;
   /* background: #101728; */
-  background: white;
+  background-image: linear-gradient(120deg, #ce80d7 0%, #ee7787 100%);
   /* background:#fff; */
   color: #0F1819;
 
@@ -9,27 +9,40 @@
 
 .navbar{
   display: flex;
+  
   justify-content: space-between;
   padding: 0 1rem;
   align-items: center;
-  border-bottom: 2px solid #fff;
-  background-color:#CDE990;
+  /* border-bottom: 2px solid #fff; */
+  /* background-color:#ffffff; */
+  background-image: linear-gradient(120deg, #ce80d7 0%, #ee7787 100%);   
   /* color: white; */
   /* position: absolute; */
   /* width: 98vw; */
   /* top: 0; */
   height: 10vh;
 
+
 }
 .nav-btn{
-  border: 2px solid black;
+border: 1px white;
   color: black;
-  background: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+background-color: white;
   height: 40px;
-  font-size: 1rem;
-  border-radius: 20px;
-  width: 150px;
-  margin-left: 3px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 30px;
+  width: 200px;
+  height: 47px;
+  margin-left: 10px;
+
+}
+.nav-btn:hover {
+   background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  transform: scale(1.1);
+  background-color: #ce80d7;
+  text-decoration: none;
 }
 
 .nav-btn1{
@@ -46,26 +59,34 @@
         
          
 .btn-grad {
-  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+  /* background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%); */
   margin: 10px;
-  padding: 15px 45px;
+  margin-left: 2rem;
+  background-color: white;
+  padding: 20px 30px;
   text-align: center;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: 0.2s;
   background-size: 200% auto;
-  color: black;            
-  border-radius: 10px;
+  color: black;    
+  border: none;  
+  cursor: pointer;
+  font-size: 16px;      
+  box-shadow: 0 0 4px rgb(100, 100, 100);
+  border-radius: 12px;
   display: block;
 }
 
 .btn-grad:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
+  transform: scale(1.1);
+  background-color: #ce80d7;
   text-decoration: none;
 }
 
 .brand-name{
-  height: 200px;
+  height: 300px;
 }
 
 
@@ -73,12 +94,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 80vh;
+  height: 68.6vh;
 
 
 }
 .home-img{
-  height: 25rem;
+  height: 30rem;
 
 }
 .home-para{
@@ -108,14 +129,14 @@
 
 }
 .file-head{
-  color: #FF5757;
-  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.3rem;
   font-weight: 400;
   margin: 0 25px;
   display: flex;
 }
 .change-tab{
-  background: #CDE990;
+  background: #E87995;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -130,15 +151,25 @@
 }
 
 .tab-btn{
-  background: linear-gradient(90deg, rgba(212,242,255,1) 0%, rgba(194,222,255,1) 50%, rgba(173,199,255,1) 100%);
-  height: 40px;
-  font-size: 1rem;
-  border-radius: 20px;
-  width: 150px;
-  border: 2px solid black;
-  margin-bottom: 1rem;
+  border: 1px white;
+    color: black;
+  background-color: white;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 30px;
+    width: 200px;
+    height: 47px;
+    margin-left: 10px;
   
-}
+  }
+  .tab-btn:hover {
+     background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    transform: scale(1.1);
+    background-color: #ce80d7;
+    text-decoration: none;
+  }
 .left-container{
   width: 75%;
   
@@ -180,20 +211,24 @@
   width: 100%;
   height: 30px;
   /* margin: 5px 0; */
-  border-radius:3px ;
-  border: 5px solid black;
-  background: transparent;
-  color: black;
+  border-radius:30px ;
+  border: 1px white ;
+  height: 3pc;
+  padding-inline-start: 3pc;
 }
+.input-area::placeholder {
+  text-size-adjust: 10;
+}
+
 .meet{
-  border: 4px solid black;
+  border: 0px solid white;
   color: black;
-  margin: 5px;
+  margin: 10px;
 
 
 }
 .me{
-  width: 100%;
+  width: 95%;
   background: transparent;
   /* height: 300px; */
   border-radius: 8px;
@@ -213,11 +248,11 @@
 
 }
 .me-video{
-  
+  margin-left: 10px;
   width: 100%;
   height: 100%;
-  border: 4px solid black;
-  margin: 1.5rem;
+  border: 3px solid black;
+  margin: 2rem;
 
 }
 
@@ -342,38 +377,71 @@
     }
 
     footer {
-      background-color: #CDE990;
-      color: #fff;
-      padding: 20px;
+      /* background-color: #d299c2; */
+      background-image: linear-gradient(120deg, #ce80d7 0%, #ee7787 100%);
+      
+      padding: 5px;
       text-align: center;
-      border-top: 2px solid #ffffff ;
+      /* border-top: 2px solid #ffffff ; */
     }
-    
-    footer h6 {
+    .footer-section{
+      height: 1rem;
+    }
+   
+    .nav-footer{
+      display: flex;
+      flex-direction: row;
+      
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-footer>h6 {
       color: black;
-      text-decoration: none;
+      /* text-decoration: none; */
       margin-right: 4%;
       margin-left: 4%;
-      display: inline;
+      cursor: pointer;
+    }
+    footer h6:hover{
+      transform: scale(1.1);
+  
     }
     
     .footer-content{
-      font-size: 1rem;
+      font-size: 2.2rem;
+      transition: 0.3s;
     }
-    
+    .footer-content:hover{
+     
+      border-bottom: 4px solid white;
+
+    }
     .copyright-content{
       margin-left: 20px;
       color: black;
+      font-size: 1.1rem;
     }
     .back-btn{
-      width: 90px;
-      height: 30px;
-      background-color: black;
-      background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
-      border: 2px solid black;
-      border-radius:8px;
-      margin: 30px;
-    }
+      margin-top: 60px;
+      border: 1px white;
+        color: black;
+      background-color: white;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        border-radius: 30px;
+        width: 200px;
+        height: 47px;
+        margin-left: 10px;
+      
+      }
+      .back-btn:hover {
+         background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        transform: scale(1.1);
+        background-color: #ce80d7;
+        text-decoration: none;
+      }
     hr{
         border: dotted black 6px;
         border-bottom: none;
@@ -381,3 +449,38 @@
         margin: 20px auto;
     }
     
+
+    .collab{
+      padding-left: 3.5pc;
+      padding-bottom: 20px;
+    }
+    .upload {
+      padding-left: 3.5pc;
+      padding-bottom: 20px;
+    }
+    .addFile {
+      padding-left: 3.5pc;
+      padding-bottom: 20px;
+    }
+
+    .back-btn2{
+      margin-top: 60px;
+      border: 1px white;
+        color: black;
+      background-color: white;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 400;
+        border-radius: 30px;
+        width: 200px;
+        height: 47px;
+        margin-left: 30%;
+      
+      }
+      .back-btn2:hover {
+         background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        transform: scale(1.1);
+        background-color: #ce80d7;
+        text-decoration: none;
+      }
