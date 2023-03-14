@@ -1,34 +1,28 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Navbar from "./components/Navbar";
-import { useRef, useState, useEffect } from "react";
-import Web3Modal from "web3modal";
-import { providers, Contract, ethers } from "ethers";
-import {
-  getHuddleClient,
-  HuddleClientProvider,
-} from "@huddle01/huddle01-client";
-import { useHuddleStore } from "@huddle01/huddle01-client/store";
+import logo from './logo.svg';
+import './App.css';
+import Navbar from './components/Navbar';
+import { useRef, useState, useEffect } from 'react';
+import Web3Modal from 'web3modal';
+import { providers, Contract, ethers } from 'ethers';
+import { getHuddleClient, HuddleClientProvider } from '@huddle01/huddle01-client';
+import { useHuddleStore } from '@huddle01/huddle01-client/store';
 // import { usePeerShareTrack } from "huddle01-client/hooks";
-import { contractAddress, abi } from "./constants";
+import { contractAddress, abi } from './constants';
 
-import Home from "./components/Home";
-import Footer from "./components/Footer";
-import Meeting from "./components/Meeting";
-import UploadFile from "./components/UploadFile";
-import FileCard from "./components/FileCard";
-import EditorPage from "./components/EditorPage";
-import AllFiles from "./components/AllFiles";
-import ChangeTab from "./components/ChangeTab";
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Meeting from './components/Meeting';
+import UploadFile from './components/UploadFile';
+import FileCard from './components/FileCard';
+import EditorPage from './components/EditorPage';
+import AllFiles from './components/AllFiles';
+import ChangeTab from './components/ChangeTab';
+import huddleClient from './utils/huddleClient';
 
 function App() {
-  const huddleClient = getHuddleClient(
-    "eb9203015d72aed1764b69cccd1f77a2189e8274a5f993030d60bda68f8b5c3a"
-    
-  );
   const [walletConnected, setWalletConnected] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [address, setAddress] = useState("");
+  const [address, setAddress] = useState('');
   const [inbtnTab, setInBtnTab] = useState(true);
   const [inUploadTab, setInUploadTab] = useState(false);
   const [inMeetTab, setInMeetTab] = useState(false);
@@ -37,7 +31,7 @@ function App() {
   // const contract  = Contract()
 
   const web3ModalRef = useRef();
-    function addfile() {
+  function addfile() {
     setInUploadTab(true);
     setInBtnTab(false);
     setInMeetTab(false);
@@ -69,8 +63,8 @@ function App() {
     // If user is not connected to the mumbai network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 80001) {
-      window.alert("Change The Network to Polygon Mumbai");
-      throw new Error("Change The Network to Polygon Mumbai");
+      window.alert('Change The Network to Polygon Mumbai');
+      throw new Error('Change The Network to Polygon Mumbai');
     }
 
     if (needSigner) {
@@ -94,20 +88,20 @@ function App() {
   const disconnect = async () => {
     await web3ModalRef.current.clearCachedProvider();
     setWalletConnected(false);
-    setAddress("");
-    console.log("disconnect clicked");
+    setAddress('');
+    console.log('disconnect clicked');
   };
 
   useEffect(() => {
     if (!walletConnected) {
       web3ModalRef.current = new Web3Modal({
-        network: "mumbai",
+        network: 'mumbai',
         cacheProvider: true,
         providerOptions: {
           walletconnect: {
-            package: require("@walletconnect/web3-provider"),
+            package: require('@walletconnect/web3-provider'),
             options: {
-              infuraId: "070c84d742ea49468438d43ca28f82f2",
+              infuraId: '070c84d742ea49468438d43ca28f82f2',
             },
           },
         },
@@ -118,54 +112,19 @@ function App() {
 
   return (
     <HuddleClientProvider client={huddleClient}>
-      <div className="App">
-        <Navbar
-          connectWallet={connectWallet}
-          address={address}
-          walletConnected={walletConnected}
-          disconnect={disconnect}
-        />
+      <div className='App'>
+        <Navbar connectWallet={connectWallet} address={address} walletConnected={walletConnected} disconnect={disconnect} />
         {!walletConnected && <Home />}
         {walletConnected && (
-          <div className="main-section">
-            <div className="right-container">
-              {inbtnTab && (
-                <ChangeTab
-                  goback={goback}
-                  meeting={meeting}
-                  addfile={addfile}
-                  editor={editor}
-                />
-              )}
-              {inMeetTab && (
-                <Meeting
-                  goback={goback}
-                  huddleClient={huddleClient}
-                  address={address}
-                />
-              )}
-              {inUploadTab && (
-                <UploadFile
-                  goback={goback}
-                  loading={loading}
-                  setLoading={setLoading}
-                  getSigner={getProviderOrSigner}
-                  address={address}
-                />
-              )}
+          <div className='main-section'>
+            <div className='right-container'>
+              {inbtnTab && <ChangeTab goback={goback} meeting={meeting} addfile={addfile} editor={editor} />}
+              {inMeetTab && <Meeting goback={goback} huddleClient={huddleClient} address={address} />}
+              {inUploadTab && <UploadFile goback={goback} loading={loading} setLoading={setLoading} getSigner={getProviderOrSigner} address={address} />}
             </div>
-            <div className="left-container">
-              {!inEditorTab && (
-                <AllFiles address={address} getSigner={getProviderOrSigner} />
-              )}
-              {inEditorTab && (
-                <EditorPage
-                  loading={loading}
-                  setLoading={setLoading}
-                  getSigner={getProviderOrSigner}
-                  address={address}
-                />
-              )}
+            <div className='left-container'>
+              {!inEditorTab && <AllFiles address={address} getSigner={getProviderOrSigner} />}
+              {inEditorTab && <EditorPage loading={loading} setLoading={setLoading} getSigner={getProviderOrSigner} address={address} />}
             </div>
           </div>
         )}
