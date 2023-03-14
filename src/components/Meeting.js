@@ -58,7 +58,6 @@ export default function Meeting(props) {
           <input className='input-area meet' onChange={handleRoom} placeholder='Connect Meeting'></input>
           <br></br>
           <button className='nav-btn' onClick={handleJoin}>
-            {' '}
             Join Meet
           </button>
         </div>
@@ -156,6 +155,14 @@ export default function Meeting(props) {
               </svg>
             )}
           </button>
+
+          <div
+            onClick={() => huddleClient.enableShare()}
+            style={{
+              cursor: 'pointer',
+            }}>
+            <p>Share</p>
+          </div>
 
           <button className=' btn-sm-mod btn-sm-mod5' onClick={() => exit()}>
             <svg
