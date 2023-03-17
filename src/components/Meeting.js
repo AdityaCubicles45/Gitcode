@@ -161,7 +161,7 @@ export default function Meeting(props) {
             style={{
               cursor: 'pointer',
             }}>
-            <p>Share</p>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M20 3H4a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1z" fill="#ffffff" data-original="#000000" class=""></path><path d="M12.707 7.293a1 1 0 0 0-1.414 0l-4 4a1 1 0 1 0 1.414 1.414L11 10.414V16a1 1 0 0 0 2 0v-5.586l2.293 2.293a1 1 0 0 0 1.414-1.414z" fill="#ffffff" data-original="#000000" class=""></path></g></svg>
           </div>
 
           <button className=' btn-sm-mod btn-sm-mod5' onClick={() => exit()}>
